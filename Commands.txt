@@ -1,0 +1,4 @@
+run Program.exe
+p TestApp.MainClass.TestProp
+continue
+quit
