@@ -1,7 +1,5 @@
 bin/*
 dep/*
 
-*.dll
-*.exe
 *.gz
 *.mdb

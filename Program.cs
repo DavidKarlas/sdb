@@ -8,6 +8,7 @@ namespace TestApp
 		public static void Main(string[] args)
 		{
 			Debugger.Break();
+			Console.WriteLine("test");
 		}
 	}
 }
