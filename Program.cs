@@ -1,15 +1,18 @@
 using System;
-using System.Diagnostics;
 
-namespace TestApp
+static class Program
 {
-	class MainClass
+	internal class HelloWorld : MarshalByRefObject
 	{
-		public static void Main(string[] args)
-		{
-			Debugger.Break();
-			Console.WriteLine("test");
-		}
+		object bla = new object ();
+	}
+
+	static void Main ()
+	{
+		AppDomain domain = AppDomain.CreateDomain ("NewAppDomain");
+
+		var proxy = domain.CreateInstanceAndUnwrap (typeof(HelloWorld).Assembly.FullName, typeof(HelloWorld).FullName);
+		System.Diagnostics.Debugger.Break ();
 	}
 }
 
